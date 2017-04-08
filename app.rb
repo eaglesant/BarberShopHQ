@@ -47,3 +47,8 @@ end
 get '/users' do
 	erb :users
 end
+
+get '/barber/:id' do
+	# @barber = @barbers.params[:id]
+	erb :barber
+end
