@@ -29,14 +29,8 @@ get '/visit' do
 end
 
 post '/visit' do
-	@user_name = params[:user_name]
-	@user_phone = params[:user_phone]
-	@date_time = params[:date_time]
-	@barber = params[:barber]
-	@color = params[:colorpicker]
 
-	c = Client.new :name => @user_name, :phone => @user_phone, :datestamp => @date_time, :barber => @barber, :color => @color
-
+	c = Client.new params[:client]
   	c.save
 
 erb "<h2>Fank's you are enroied!!!</h2>"
