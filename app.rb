@@ -8,7 +8,7 @@ set :database, "sqlite3:barbershop.db"
 
 before do
 	@barbers = Barber.all
-	@clients = Client.all
+	@clients = Client.order 'created_at DESC'
 
 end
 
