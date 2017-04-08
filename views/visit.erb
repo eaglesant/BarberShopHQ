@@ -3,7 +3,7 @@
 <form action="/visit" method="POST" style="width: 370px;">
   <div class="form-group">
     <label for="user_name">Your name</label>
-    <input type="text" name="client[name]" class="form-control" id="user_name" placeholder="Enter your name" value="<%= @user_name %>">
+    <input type="text" name="client[name]" class="form-control" id="user_name" placeholder="Enter your name" value="<%= @c.name if @c %>">
   </div><!-- 
   <div class="form-group">
     <label for="email">Email address</label>
@@ -12,11 +12,11 @@
   </div> -->
   <div class="form-group">
     <label for="phone">Your phone</label>
-    <input type="text" name="client[phone]" class="form-control" id="phone" placeholder="Your phone">
+    <input type="text" name="client[phone]" class="form-control" id="phone" placeholder="Your phone" value="<%= @c.phone if @c %>">
   </div>
   <div class="form-group">
     <label for="datetimepicker">When are you waiting?</label>
-    <input type="text" name="client[datestamp]" class="form-control" id="datetimepicker" placeholder="date and time">
+    <input type="text" name="client[datestamp]" class="form-control" id="datetimepicker" placeholder="date and time" value="<%= @c.datestamp if @c %>">
   </div>
  <!--  <div class="form-group">
     <label for="barber">Choise barber</label>
