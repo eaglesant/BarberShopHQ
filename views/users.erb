@@ -1,0 +1,29 @@
+<h2>All users</h2>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Num</th>
+			<th>Name</th>
+			<th>Phone</th>
+			<th>Date & time</th>
+			<th>Barber</th>
+			<th>Color</th>
+		</tr>	
+	</thead>
+
+	<tbody>
+		<% @clients.each do |client| %>
+		<tr>
+			
+			<td><%= client.id %></td>
+			<td><%= client.name %></td>
+			<td><%= client.phone %></td>
+			<td><%= client.datestamp %></td>
+			<td><%= client.barber %></td>
+			<td><%= client.color %></td>
+		</tr>
+		<% end %>
+	</tbody>
+
+
+</table>
